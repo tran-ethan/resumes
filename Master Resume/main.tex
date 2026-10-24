@@ -1,0 +1,220 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{fontawesome} % For the link icon
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{#2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[4]{
+  \item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \small{\href{#3}{\textbf{#1}\hspace{0.3em}{\faLink}} $|$ \emph{#2}} & \textbf{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Ethan Tran} \\ \vspace{1pt}
+    \small Montreal, QC, Canada $|$ 
+    \small 438-389-5103 $|$ 
+    \href{mailto:ethan.tran@mail.mcgill.ca}{\underline{ethan.tran@mail.mcgill.ca}} $|$ 
+    \href{https://linkedin.com/in/-ethantran-}{\underline{linkedin.com/in/-ethantran-}} $|$
+    \href{https://github.com/tran-ethan}{\underline{github.com/tran-ethan}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {McGill University}{Aug 2024 -- May 2028}
+      {Bachelor of Engineering, Computer Engineering}{Montreal, QC}
+        \resumeItemListStart
+            \resumeItem{GPA: \textbf{3.96 / 4.00} | Activities \& Societies: Claude Builder Club, McHacks, Hack 4 Impact}
+        \resumeItemListEnd
+    \resumeSubheading
+      {Vanier College}{Aug 2022 -- Jun 2024}
+      {DCS, Computer Science and Mathematics}{Montreal, QC}
+        \resumeItemListStart
+            \resumeItem{Graduated with Dean's Honour Roll (2023, 2024)}
+            \resumeItem{Computer Science Tutor for \emph{Intro to Programming} and \emph{Data Structures and Object-Oriented Programming} in Java}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+      \resumeSubheading
+          {Royal Bank of Canada}{May 2026 -- Aug 2026}
+          {Software Developer Intern, Amplify}{Montreal, QC}
+          \resumeItemListStart
+            \resumeItem{Built an agentic KYC onboarding platform for Capital Markets to automate compliance document collection, data extraction, and validation using React, TypeScript, Python, FastAPI, PostgreSQL, LlamaCloud, and AWS S3}
+            \resumeItem{Reduced manual review time per onboarding case by \textbf{80\%} through an AI-powered document processing pipeline}
+            \resumeItem{Delivered projected savings of \textbf{64,000 hours} annually by automating up to \textbf{8,000} onboarding cases per year, with freed capacity projected to generate \textbf{\$80M} in incremental annual revenue per the team's conservative business case}
+            \resumeItem{Architected relational SQL schemas powering a compliance rules engine that dynamically cross-references client attributes against a library of document and data requirements, eliminating all manual policy lookups}
+            \resumeItem{Delivered a product end-to-end in a 4-person team and presented it to \textbf{C-suite} executives through RBC Amplify}
+          \resumeItemListEnd
+    
+
+    \resumeSubheading
+      {Intact Financial Corporation}{May 2025 -- Dec 2025}
+      {Backend Software Developer Intern}{Montreal, QC}
+      \resumeItemListStart
+        \resumeItem{Supported \textbf{150,000+} potential monthly client acquisitions by developing broker workflows in Java, Spring Boot, and Maven to facilitate data transfers between third-party broker software and Intact services}
+        \resumeItem{Contributed to a large-scale modernization effort by migrating legacy SOAP-based services to REST APIs}
+        \resumeItem{Took initiative to fix and accelerate regression analysis by developing Python scripts to automate repetitive tasks, uncovering \textbf{200+ regression failures} and reducing manual analysis time by \textbf{10 hours/week}}
+        \resumeItem{Improved testing reliability by developing JUnit, Mockito, and Cucumber test suites for unit, integration, and regression testing, validating API endpoints and accurate data operations between legacy and modernized systems}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+   % \resumeSubSubheading
+   %  {Software Engineer I}{Oct 2014 - Sep 2016}
+   %  \resumeItemListStart
+   %     \resumeItem{Apache Beam}
+   %       {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+   %  \resumeItemListEnd
+   % \resumeSubHeadingListEnd
+%-------------------------------------------
+    \resumeSubheading
+      {Hack 4 Impact McGill}{Feb 2025 -- Present}
+      {Software Developer}{Montreal, QC}
+      \resumeItemListStart
+        \resumeItem{Built a grants management platform using React, TypeScript, Next.js, PostgreSQL, Supabase, and Prisma for a nonprofit day shelter serving \textbf{1,000+} meals daily to Montreal's unhoused population}
+        \resumeItem{Designed and implemented relational database schemas using PostgreSQL and Supabase to model grants, funding allocations, and the distribution of \textbf{multi-million-dollar} government funding across the organization's programs}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {Sign Atlas}
+          {React, TypeScript, Next.js, Vercel, Three.js, MediaPipe}
+          {https://devpost.com/software/sign-atlas}
+          {Apr 2024}
+          \resumeItemListStart
+            \resumeItem{Won \textbf{first place} overall at the MariHacks 2024 hackathon among \textbf{200} participants}
+            \resumeItem{Developed and deployed a web app on Vercel using Next.js and React that helps people learn ASL}
+            \resumeItem{Used Google's MediaPipe model for gesture recognition and Three.js to render interactive 3D hand models}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {Replex}
+          {React Native, JavaScript, Expo, MoveNet}
+          {https://devpost.com/software/replex}
+          {May 2024}
+          \resumeItemListStart
+            \resumeItem{Won \textbf{first place} overall at the JACHacks 2024 hackathon among \textbf{100} participants}
+            \resumeItem{Developed a mobile app using React Native and Expo that helps users follow their custom workouts by tracking their exercises, sets, and reps using computer vision and Google's MoveNet pose estimation model}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {Fire Guard}
+          {Scikit-learn, Python, Pandas, Flask, Jupyter Notebook, Svelte}
+          {https://github.com/tran-ethan/fire-guard}
+          {Aug 2024}
+          \resumeItemListStart
+            \resumeItem{Trained machine learning models for wildfire classification using climate data with Scikit-learn and Pandas}
+            \resumeItem{Built a web-based interactive map for visualizing wildfire predictions and showing historical wildfires alongside weather data using Svelte and Flask as part of an 8-week intensive R\&D program}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages:}{ Python, Java, SQL, JavaScript, TypeScript, HTML, CSS, C} \\
+     \textbf{Frameworks/Libraries:}{ Spring Boot, FastAPI, React, Next.js, Vue, JUnit, Cucumber, Mockito} \\
+     \textbf{Tools/DevOps/APIs:}{ Git, Docker, PostgreSQL, Node.js, GitHub Actions, Gradle, Maven, Vite, REST, SOAP } \\
+     \textbf{Interests:}{ Climbing, Piano, Language Acquisition, Tennis, Badminton, Running, Fitness } \\
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
